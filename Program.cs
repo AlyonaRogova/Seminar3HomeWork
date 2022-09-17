@@ -9,26 +9,37 @@ namespace Seminar3HomeWork
             // Напишите программу, которая принимает на вход пятизначное число и 
             // проверяет, является ли оно палиндромом
 
-            // void Pal (int [] array){
-            // index = 4;
-            // size = 5;
-            //     for ( array [0] == array [4] && array [1] == array [3], index<size, index++; )
-            //     {
-            //         Console.WriteLine ("Число является палиндромом");
-            //     }
-            //     Console.WriteLine("Число не является палиндромом");
-            // }
+            void Pal (int num){
+               
+                int el1=0;
+                int el2=0;
+                int el3=0;
+                int el4=0;
+                int el5=0;
+                int el6=0;
 
-            // int [] array = {0,0,0,0,0};
-            // int [] array = new int[5];
-            // Console.WriteLine("Введите пятизначное число: ");
-            // int [] array = Convert.ToInt32(Console.ReadLine());
-            // if (index != 4){
-            //     Console.WriteLine("Введенное число не соответствует условию");
-            // }
+                el1=num%10;
+                el2=num%100;
+                el3=el2/10;
+                el4=num/10000;
+                el5=num/1000;
+                el6=el5%10;
+
+                if (el1==el4 && el3==el6){
+                    Console.WriteLine ("Число является палиндромом");
+                }
+                else{
+                    Console.WriteLine("Число не является палиндромом");
+                }
+            }
+
+            Console.WriteLine ( "Ведите пятизначное число: ");
+            int num= Convert.ToInt32(Console.ReadLine());
+            if (num>99999 && num<9999) Console.WriteLine ("Число не соответствует запросу");
+            else Pal(num);
+
             
-            // Pal (array);
-        
+                  
 
             //Напишите программу, которая принимает на вход координаты двух точек 
             // и находит расстояние между ними в 3Д пространстве
@@ -41,33 +52,34 @@ namespace Seminar3HomeWork
             //     double result = Math.Sqrt (sum);
             //     return result;
             // }
+            
 
             
             // Console.WriteLine("Введите координаты первой точки: ");
             // int x1 = Convert.ToInt32 (Console.ReadLine());
             // int y1 = Convert.ToInt32 (Console.ReadLine());
             // int z1 = Convert.ToInt32 (Console.ReadLine());
-            // Console.Write ($"{x1} {y1} {z1}");
+            // Console.WriteLine ($"{x1} {y1} {z1}");
             
             // Console.WriteLine("Введите координаты второй точки: ");
             // int x2 = Convert.ToInt32 (Console.ReadLine());
             // int y2 = Convert.ToInt32 (Console.ReadLine());
             // int z2 = Convert.ToInt32 (Console.ReadLine());
-            // Console.Write ($"{x2} {y2} {z2}");
+            // Console.WriteLine ($"{x2} {y2} {z2}");
 
-            // average (x1, x2, y1, y2, z1, z2);
+            // Console.WriteLine ($"Расстояние между точками равно {average (x1, x2, y1, y2, z1, z2)}");
 
-        //Напишите программу, которая принимает на ввод число (N) и выдает таблицу кубов чисел от 1 до N
+            //Напишите программу, которая принимает на ввод число (N) и выдает таблицу кубов чисел от 1 до N
 
-        void Cube (int num){
-            for (int i=num; i<=10; i++){
-                Console.WriteLine ($"{i}*{i}*{i} = {Math.Pow(i,3)}");
-            }
-        }
-        
-        Console.WriteLine("Введите число: ");
-        int num = Convert.ToInt32(Console.ReadLine());
-        Cube (num);
+            // void Cube (int num){
+            //     for (int i=num; i<=10; i++){
+            //         Console.WriteLine ($"{i}*{i}*{i} = {Math.Pow(i,3)}");
+            //     }
+            // }
+            
+            // Console.WriteLine("Введите число: ");
+            // int num = Convert.ToInt32(Console.ReadLine());
+            // Cube (num);
 
             
         }
